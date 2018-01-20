@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <!-- <div class="wisdombudhn.select.chained">
+        <select name="select1" id="select1" style="width:100px;"></select>
+        <select name="select2" id="select2" style="width:100px;"></select>
+        <select name="select3" id="select3" style="width:100px;"></select>
+        <select name="select4" id="select4" style="width:100px;"></select>
+        <select name="select5" id="select5" style="width:100px;"></select>
+    </div> -->
+
+    <div id="wisdombudhn-select-chained1" class="wisdombudhn.select.chained" data-control-lable="省-市-县-乡-村" data-control-value-split="." data-control-style="control-style" data-select-count="5" data-select-style="select-style">
+    </div>
+
+</body>
+
+</html>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="wisdombudhn.select.chained.js">
+</script>
+
+<script>
+    var data = [{
+        text: "1",
+        value: "1",
+        list: [{
+            text: "11",
+            value: "1.1",
+            list: [{
+                text: "111",
+                value: "1.1.1",
+                list: [{
+                    text: "1111",
+                    value: "1.1.1.1",
+                    list: [{
+                        text: "11111",
+                        value: "1.1.1.1.1",
+                        list: []
+                    }, {
+                        text: "11112",
+                        value: "1.1.1.1.2",
+                        list: []
+                    }]
+                }, {
+                    text: "1112",
+                    value: "1.1.1.2",
+                    list: [{
+                        text: "11121",
+                        value: "1.1.1.2.1",
+                        list: []
+                    }, {
+                        text: "11122",
+                        value: "1.1.1.2.2",
+                        list: []
+                    }]
+                }]
+            }, {
+                text: "112",
+                value: "1.1.2",
+                list: [{
+                    text: "1121",
+                    value: "1.1.2.1",
+                    list: [{
+                        text: "11211",
+                        value: "1.1.2.1.1",
+                        list: []
+                    }, {
+                        text: "11212",
+                        value: "1.1.2.1.2",
+                        list: []
+                    }]
+                }]
+            }]
+        }, {
+            text: "12",
+            value: "1.2",
+            list: [{
+                text: "121",
+                value: "1.2.1",
+                list: [{
+                    text: "1211",
+                    value: "1.2.1.1",
+                    list: [{
+                        text: "12111",
+                        value: "1.2.1.1.1",
+                        list: []
+                    }, {
+                        text: "12112",
+                        value: "1.2.1.1.2",
+                        list: []
+                    }]
+                }]
+            }, {
+                text: "122",
+                value: "1.2.2",
+                list: [{
+                    text: "1221",
+                    value: "1.2.2.1",
+                    list: [{
+                        text: "12211",
+                        value: "1.2.2.1.1",
+                        list: []
+                    }, {
+                        text: "12212",
+                        value: "1.2.2.1.2",
+                        list: []
+                    }]
+                }]
+            }]
+        }]
+    }, {
+        text: "2",
+        value: "2",
+        list: [{
+            text: "21",
+            value: "2.1",
+            list: [{
+                text: "211",
+                value: "2.1.1",
+                list: [{
+                    text: "2111",
+                    value: "2.1.1.1",
+                    list: [{
+                        text: "21111",
+                        value: "2.1.1.1.1",
+                        list: []
+                    }, {
+                        text: "21112",
+                        value: "2.1.1.1.2",
+                        list: []
+                    }]
+                }]
+            }, {
+                text: "212",
+                value: "2.1.2",
+                list: [{
+                    text: "2121",
+                    value: "2.1.2.1",
+                    list: [{
+                        text: "21211",
+                        value: "2.1.2.1.1",
+                        list: []
+                    }, {
+                        text: "21212",
+                        value: "2.1.2.1.2",
+                        list: []
+                    }]
+                }]
+            }]
+        }, {
+            text: "22",
+            value: "2.2",
+            list: [{
+                text: "221",
+                value: "2.2.1",
+                list: [{
+                    text: "2211",
+                    value: "2.2.1.1",
+                    list: [{
+                        text: "22111",
+                        value: "2.2.1.1.1",
+                        list: []
+                    }, {
+                        text: "22112",
+                        value: "2.2.1.1.2",
+                        list: []
+                    }]
+                }]
+            }, {
+                text: "222",
+                value: "2.2.2",
+                list: [{
+                    text: "2221",
+                    value: "2.2.2.1",
+                    list: [{
+                        text: "22211",
+                        value: "2.2.2.1.1",
+                        list: []
+                    }, {
+                        text: "22212",
+                        value: "2.2.2.1.2",
+                        list: []
+                    }]
+                }]
+            }]
+        }]
+    }];
+
+    var selects = $('#wisdombudhn-select-chained1>select');
+
+    WisdombudhnSelectChained.bindControl(selects, data, $("#wisdombudhn-select-chained1"));
+
+    // var select1 = document.getElementById("select1");
+    // var select2 = document.getElementById("select2");
+    // var select3 = document.getElementById("select3");
+    // var select4 = document.getElementById("select4");
+    // var select5 = document.getElementById("select5");
+    // var selectList = [select1, select2, select3, select4, select5];
+
+    // cascade(selectList, data);
+
+    // function cascade(selectList, data) {
+    //     // 这里selectList为依次级联的选择器元素列表，如[select1,select2,select3,...] 
+    //     // TODO 
+    //     for (var i = 0; i < selectList.length; i++) {
+    //         var selectData = data;
+    //         //填充每个选择框
+    //         for (var j = 0; j < i; j++) {
+    //             selectData = selectData[0].list;
+    //         }
+    //         fillSelect(selectList[i], selectData);
+
+    //         //选择框变动事件
+    //         selectList[i].addEventListener('change', function(event) {
+    //             var targetStr = event.target.value;
+    //             var reg = /\d+/g;
+    //             var arr = targetStr.match(reg);
+    //             var num = arr.length;
+    //             if (num >= selectList.length) {
+    //                 return;
+    //             }
+    //             //获取需要变动的选择框
+    //             var newSeclectList = [];
+    //             for (var k = num; k < selectList.length; k++) {
+    //                 newSeclectList.push(selectList[k]);
+    //             }
+    //             //获取需要变动的数据
+    //             var newData = data;
+    //             for (var z = 0; z < num; z++) {
+    //                 newData = newData[parseInt(arr[z] - 1)].list;
+    //             }
+    //             cascade(newSeclectList, newData);
+    //         });
+    //     }
+    // }
+    // //更新select 
+    // function fillSelect(select, list) {
+    //     if (!select || !list) {
+    //         return;
+    //     }
+    //     select.innerHTML = '';
+
+
+    //     list.forEach(function(item) {
+    //         var option = new Option(item.text, item.value);
+    //         select.add(option);
+    //     });
+    // }
+</script>
